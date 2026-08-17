@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>My Personal Website - Profile</title>
+    <style>
+        /* Base Page Setup */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Task 2: UNIFIED HEADER FOR INNER PAGES */
+        .header-container {
+            position: relative; 
+            width: 100%;
+            height: 250px; /* Shorter height than home page for content focus */
+            background-image: url('Turtle.jpg'); 
+            background-size: 100% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-bottom: 4px solid #5a86a3;
+        }
+
+        /* Darkened overlay layer over background image */
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55); 
+            backdrop-filter: blur(4px);
+        }
+
+        /* Positioned text over the header image */
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            color: lightcyan;
+            margin: 0;
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            margin: 0 0 5px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        /* Base Navigation Bar Design matching Home Page */
+        .navbar {
+            background-color: #2c3e50; /* Matches your Home page navbar background */
+            padding: 15px;
+            text-align: center;
+            user-select: none;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.7); /* Muted white for inactive links */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Hover animation ONLY for non-active buttons */
+        .navbar a:hover:not(.active) {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.12) !important;
+            transform: translateY(-1px);
+        }
+
+        /* LOCKED ACTIVE HIGHLIGHT (PROFILE IS ACTIVE HERE) */
+        .navbar a.active {
+            color: #ffffff !important;
+            background-color: #3498db !important; /* Uniform deep blue active color */
+            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3) !important;
+            cursor: default;
+        }
+
+        /* TWO-COLUMN LAYOUT FOR PROFILE CONTENT */
+        .profile-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        /* Left Sidebar Presentation Card */
+        .profile-card {
+            flex: 1;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3a6880; /* Elegant seafoam accent border ring */
+            margin-bottom: 15px;
+        }
+
+        /* Right Core Biography Area */
+        .profile-details {
+            flex: 2.5;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+
+        /* Decorative line under title */
+        .profile-details h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #3a6880;
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+
+        /* Creative Tag Chips */
+        .skill-badge {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 5px 5px 5px 0;
+        }
+
+        /* Timeline Tracker Styles */
+        .timeline-item {
+            border-left: 3px solid #3a6880;
+            padding-left: 15px;
+            margin-left: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <div class="header-overlay"></div>
+        <div class="header-text">
+            <h1>My Personal Website</h1>
+            <p style="font-size: 1rem; margin: 0; color: rgba(255,255,255,0.8);">Welcome to my digital space</p>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="profile.html" class="active">PROFILE</a>
+        <a href="contacts.html">CONTACTS</a>
+    </div>
+
+    <div class="profile-wrapper">
+        
+        <div class="profile-card">
+            <img src="Formalpic.jpg" alt="Vanessa M. Dela Cruz" class="profile-avatar" onerror="this.src='https://via.placeholder.com/150'">
+            <h3 style="color: #2c3e50; margin: 10px 0 5px 0;">Vanessa M. Dela Cruz</h3>
+            <p style="color: #7f8c8d; font-size: 14px; margin: 0 0 15px 0;">BSIT Student</p>
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+            
+            <p style="font-size: 14px; color: #555; line-height: 1.6; text-align: left; margin: 0;">
+                <strong>Degree:</strong> BS in Information Technology<br>
+                <strong>Year Level:</strong> Sophomore (2nd Year)<br>
+                <strong>Focus:</strong> Frontend Dev & Systems
+            </p>
+        </div>
+
+        <div class="profile-details">
+            <h2 style="margin-top: 0; color: #2c3e50; font-size: 1.8rem;">Biography</h2>
+            <p style="color: #444; line-height: 1.7; font-size: 15px; margin-top: 20px;">
+                I am Vanessa M. Dela Cruz. I am a BSIT sophomore student who is very eager and willing to learn website development. I have fundamental knowledge in HTML already but I would love to know more.
+            </p>
+
+            <h3 style="margin-top: 35px; color: #2c3e50; margin-bottom: 10px;">Technical Skills</h3>
+            <div style="margin-bottom: 10px;">
+                <span class="skill-badge">HTML5 Structure</span>
+                <span class="skill-badge">CSS3 Flexbox</span>
+                <span class="skill-badge">UI Layout Architecture</span>
+                <span class="skill-badge">Database Fundamentals</span>
+            </div>
+
+            <h3 style="margin-top: 35px; color: #2c3e50; margin-bottom: 5px;">Education & Path</h3>
+            <div class="timeline-item">
+                <h4 style="margin: 0; color: #3a6880; font-size: 15px;">Higher Education Domain</h4>
+                <p style="margin: 5px 0 0 0; font-size: 14px; color: #555; line-height: 1.5;">
+                    Actively expanding competencies in core computing systems, interactive interface layouts, and web application models.
+                </p>
+            </div>
+        </div>
+
+    </div>
+        <div class="footer-container" style="width: 100%; text-align: center; padding: 20px 0; margin-top: 50px; border-top: 1px solid #dddddd; background-color: #ffffff;">
+        <p style="color: #7f8c8d; font-size: 13px; margin: 0;">&copy; 2026 Vanessa M. Dela Cruz | All Rights Reserved</p>
+    </div>
+
+
+</body>
+</html>

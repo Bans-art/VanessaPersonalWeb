@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Personal Website - Home</title>
+    <style>
+        /* Base Page Setup */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* HEADER  */
+        .header-container {
+            position: relative; 
+            width: 100%;
+            height: 250px; 
+            background-image: url('Wavespic.jpg'); 
+            background-size: 100% 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            border-bottom: 4px solid #679bbe;
+        }
+
+        /*  over image  */
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55); 
+            backdrop-filter: blur(8px);
+        }
+
+        /* Positioned text over the image */
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            color: white;
+            margin: 0;
+        }
+
+        .header-text h1 {
+            font-size: 3rem;
+            margin: 0 0 10px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Text Shadow */
+        }
+
+        /* MENUS BAR */
+        .navbar {
+            background-color: #0f172a;
+            padding: 15px;
+            text-align: center;
+            user-select: none;
+        }
+
+        .navbar a {
+            color: rgba(255, 255, 255, 0.7); 
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Custom Transition Easing curve */
+        }
+        
+        /* ACTIVE HIGHLIGHT STYLE */
+        .navbar a.active {
+            background-color: #3498db !important; /* The active blue color */
+            color: #ffffff !important;             
+        }
+
+        /* HOVER EFFECT: Only triggers on links that are NOT active */
+        .navbar a:hover:not(.active) {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.12); /* Subtle frosted hover background */
+            transform: translateY(-1px); /* Premium slight float up */
+        }
+        
+        .navbar a:hover.active {
+            color: #ffffff !important;
+            transform: translateY(-1px);
+        }
+
+        /* SIDE-BY-SIDE FLEXBOX LAYOUT */
+        .main-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+       
+        .sidebar-content {
+            flex: 1;
+            background: linear-gradient(135deg, #fdfbf7, #f5edd6); /* gradient */
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #679bbe; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            min-height: 300px;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            flex: 3;
+            background: linear-gradient(135deg, #fdfbf7, #f5edd6); 
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06); 
+            min-height: 300px;
+        }
+
+       
+        .main-content h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #3a6880; 
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+
+        /* FOOTER AREA */
+        .footer-container {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-top: 1px solid #dddddd;
+            background-color: #ffffff;
+        }
+
+        .footer-container p {
+            color: #7f8c8d;
+            font-size: 13px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+</div>
+
+<body>
+
+    <div class="header-container">
+        <div class="header-overlay"></div>
+        <div class="header-text">
+            <h1>My Personal Website</h1>
+            <p style="font-size: 1.2rem; margin: 0;">Welcome to my digital space!</p>
+        </div>
+    </div>
+    
+
+    <div class="navbar">
+        <a href="index.html" class="active">HOME</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="contacts.html">CONTACTS</a>
+    </div>
+
+    <div class="main-wrapper">
+        
+        <div class="sidebar-content">
+    <h3 style="margin-top: 0; color: #2c3e50; font-size: 1.3rem;">Project Status</h3>
+    
+    <div style="display: inline-block; background-color: #2e7d32; color: white; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 15px;">
+        ● LOCALHOST
+    </div>
+    
+    <p style="margin: 0 0 10px 0; font-size: 14px; line-height: 1.5;">
+        <strong>Current Milestone:</strong><br>
+        Laboratory Exercise 3 Complete.
+    </p>
+    
+    <p style="margin: 0 0 10px 0; font-size: 14px; line-height: 1.5;">
+        <strong>Frameworks Used:</strong><br>
+        HTML5, Standard CSS Layouting, and custom layout styling.
+    </p>
+    
+    <hr style="border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 15px 0;">
+    
+    <p style="margin: 0; font-size: 12px; color: #7f8c8d; font-style: italic;">
+        Last updated: June 2026
+    </p>
+</div>
+
+
+        <div class="main-content">
+            <h2 style="margin-top: 0; color: #2c3e50;">About This Project</h2>
+            <hr style="border: 0; border-top: 1px solid linear-gradient(135deg, #fdfbf7, #f5edd6); margin-bottom: 20px;">
+            <p>This layout represents the core structural modifications completed for Laboratory Activity #3, utilizing standard CSS positioning frameworks and flexible row formatting models to divide presentation cards accurately.</p>
+            <p>Feel free to click through the navigation links above to see my updated profiles and custom layouts!</p>
+        </div>
+
+    </div>
+    
+
+    <div class="footer-container">
+        <p>&copy; 2026 Vanessa M. Dela Cruz | All Rights Reserved</p>
+    </div>
+
+    <p>Today's Date: <span id="current-date"></span></p>
+    
+
+    <script>
+    // pop-up box 
+    alert("Hello! This is my personal webpage.\nThank you for visiting.");
+    
+// Formats and displays the current date completely
+const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const today = new Date().toLocaleDateString('en-US', dateOptions);
+document.getElementById('current-date').textContent = today;
+
+</script>
+
+
+</body>
+</html>
